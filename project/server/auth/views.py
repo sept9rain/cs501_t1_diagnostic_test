@@ -73,7 +73,7 @@ class UsersList(MethodView):
     
 # define the API resources
 registration_view = RegisterAPI.as_view('register_api')
-UserList_view = UsersList.as_view('user_list_api')
+userList_view = UsersList.as_view('user_list_api')
 
 # add Rules for API Endpoints
 auth_blueprint.add_url_rule(
@@ -83,6 +83,6 @@ auth_blueprint.add_url_rule(
 )
 auth_blueprint.add_url_rule(
     '/auth/user',
-    view_func=UserList_view,
+    view_func=userList_view,
     methods=['POST', 'GET']
 )
